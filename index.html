@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishwari Belhekar | AI/ML Engineer & Software Developer</title>
+    <meta name="description" content="Portfolio of Ishwari Belhekar, a B.Tech CSE (AI & ML) student building AI/ML, full stack, data science, cybersecurity, NLP, and cloud-integrated projects.">
+    <meta name="keywords" content="Ishwari Belhekar, AI ML portfolio, software developer, full stack developer, data science, cybersecurity, NLP, B.Tech CSE AI ML">
+    <meta name="author" content="Ishwari Belhekar">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta property="og:title" content="Ishwari Belhekar | AI/ML Engineer & Software Developer">
+    <meta property="og:description" content="AI/ML, software development, data science, cybersecurity, NLP, and cloud-integrated project portfolio.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ishwari Belhekar Portfolio">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ishwari Belhekar | AI/ML Engineer & Software Developer">
+    <meta name="twitter:description" content="B.Tech CSE (AI & ML) student building real-world AI/ML, full stack, data science, and cybersecurity solutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div id="progress-bar" aria-hidden="true"></div>
+
+    <nav class="navbar" id="navbar" aria-label="Primary navigation">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo" aria-label="Ishwari Belhekar home">IB</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero section reveal">
+            <div class="container hero-content">
+                <p class="greeting">Hello, I'm <span class="wave" aria-hidden="true">Hi</span></p>
+                <h1 class="name gradient-text">Ishwari Belhekar</h1>
+                <div class="typed-container" aria-label="Professional roles">
+                    <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/ishwari418" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/ishwari-belhekar-1ba4bb31b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <a href="#projects" class="cta-btn">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="about section reveal">
+            <div class="container">
+                <h2 class="section-title gradient-text">About Me</h2>
+                <div class="about-content">
+                    <p>I am a 3rd-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning, with a strong interest in AI/ML, software development, full stack engineering, data science, and cybersecurity. I enjoy building end-to-end projects that connect practical user needs with reliable, real-world technology solutions.</p>
+                    <p>I have hands-on experience across machine learning, web development, NLP, cybersecurity, and cloud-integrated applications, and I am continuously exploring modern tools, frameworks, and engineering practices. I am actively looking for internships, research opportunities, and software engineering roles where I can contribute, learn deeply, and solve meaningful problems through technology.</p>
+                </div>
+
+                <div class="stats" aria-label="Portfolio highlights">
+                    <div class="stat-item">
+                        <h3 class="stat-number gradient-text">7+</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number gradient-text">20+</h3>
+                        <p>Technologies</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number gradient-text">3+</h3>
+                        <p>Years Learning</p>
+                    </div>
+                </div>
+
+                <div class="education reveal">
+                    <h3 class="subsection-title">Education</h3>
+                    <div class="edu-card glass-panel">
+                        <i class="fa-solid fa-graduation-cap edu-icon" aria-hidden="true"></i>
+                        <div class="edu-info">
+                            <h4>B.Tech in Computer Science Engineering (Artificial Intelligence & Machine Learning)</h4>
+                            <p class="university">Sanjivani University, Kopargaon</p>
+                            <p class="duration">2024 - 2028</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section reveal">
+            <div class="container">
+                <h2 class="section-title gradient-text">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass-panel">
+                        <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Programming Languages</h3>
+                        <div class="skill-items">
+                            <span class="skill-item"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                            <span class="skill-item"><i class="fa-solid fa-code" aria-hidden="true"></i> C++</span>
+                            <span class="skill-item"><i class="fa-brands fa-java" aria-hidden="true"></i> Java</span>
+                            <span class="skill-item"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> R</span>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-panel">
+                        <h3><i class="fa-solid fa-globe" aria-hidden="true"></i> Web Technologies</h3>
+                        <div class="skill-items">
+                            <span class="skill-item"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
+                            <span class="skill-item"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                            <span class="skill-item"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-panel">
+                        <h3><i class="fa-solid fa-database" aria-hidden="true"></i> Databases</h3>
+                        <div class="skill-items">
+                            <span class="skill-item"><i class="fa-solid fa-database" aria-hidden="true"></i> MySQL</span>
+                            <span class="skill-item"><i class="fa-solid fa-leaf" aria-hidden="true"></i> MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-panel">
+                        <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> Data Science & Machine Learning</h3>
+                        <div class="skill-items">
+                            <span class="skill-item"><i class="fa-solid fa-calculator" aria-hidden="true"></i> NumPy</span>
+                            <span class="skill-item"><i class="fa-solid fa-table" aria-hidden="true"></i> Pandas</span>
+                            <span class="skill-item"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> Matplotlib</span>
+                            <span class="skill-item"><i class="fa-solid fa-robot" aria-hidden="true"></i> Scikit-Learn</span>
+                            <span class="skill-item"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Jupyter Notebook</span>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-panel">
+                        <h3><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Tools & DevOps</h3>
+                        <div class="skill-items">
+                            <span class="skill-item"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</span>
+                            <span class="skill-item"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</span>
+                            <span class="skill-item"><i class="fa-brands fa-docker" aria-hidden="true"></i> Docker</span>
+                            <span class="skill-item"><i class="fa-solid fa-code" aria-hidden="true"></i> VS Code</span>
+                            <span class="skill-item"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Power BI</span>
+                            <span class="skill-item"><i class="fa-solid fa-palette" aria-hidden="true"></i> Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section reveal">
+            <div class="container">
+                <h2 class="section-title gradient-text">Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #7c3aed, #4f46e5);">
+                            <span class="project-category">Healthcare</span>
+                            <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>AyurSutra - Panchakarma Patient Management & Therapy Scheduling System</h3>
+                            <p>Healthcare-grade web application designed to digitize Panchakarma clinic operations with role-based access, patient management, therapy scheduling, and Salesforce appointment synchronization.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>Doctor Dashboard</li>
+                                <li>Patient Portal</li>
+                                <li>Therapy Scheduling</li>
+                                <li>Salesforce OAuth Integration</li>
+                                <li>Automated Email Notifications</li>
+                                <li>Responsive Healthcare UI</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Flask</span><span>Python</span><span>Bootstrap 5</span><span>Salesforce REST API</span><span>OAuth 2.0</span><span>JSON Storage</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/buildcore11/Ayursutra-Panchakarma-Management-System" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #06d6a0, #118ab2);">
+                            <span class="project-category">Cybersecurity</span>
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>CyberGuard - AI-Powered Cybersecurity & Threat Intelligence Suite</h3>
+                            <p>Enterprise-grade cybersecurity platform using AI, threat intelligence feeds, and analytics to detect phishing, malware, spam calls, and suspicious applications.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>Phishing Detection</li>
+                                <li>URL Threat Analysis</li>
+                                <li>VirusTotal Integration</li>
+                                <li>AI Security Assistant</li>
+                                <li>Secure Vault</li>
+                                <li>Caller Intelligence System</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Node.js</span><span>Express</span><span>TypeScript</span><span>FastAPI</span><span>Gemini AI</span><span>MongoDB</span><span>JWT</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ishwari418/CyberGuard-X" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                            <span class="project-category">NLP</span>
+                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>KnowMap - Cross-Domain Knowledge Graph Explorer</h3>
+                            <p>NLP-powered platform that extracts entities and relationships from text and visualizes them as interactive knowledge graphs with Neo4j integration.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>Entity Extraction</li>
+                                <li>Relationship Detection</li>
+                                <li>Semantic Search</li>
+                                <li>Neo4j Integration</li>
+                                <li>Interactive Graph Visualization</li>
+                                <li>User Authentication</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Python</span><span>Streamlit</span><span>SpaCy</span><span>Transformers</span><span>Neo4j</span><span>NetworkX</span><span>Docker</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ishwari418/Knowmap-cross-domain-knowledge-mapping-" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #7c3aed, #06d6a0);">
+                            <span class="project-category">Computer Vision</span>
+                            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Real-Time Object Detection System</h3>
+                            <p>Computer vision application capable of detecting and classifying objects in real time using the YOLOv8 deep learning framework.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>Real-Time Detection</li>
+                                <li>Live Video Processing</li>
+                                <li>Bounding Box Tracking</li>
+                                <li>Multi-Object Recognition</li>
+                                <li>High-Speed Inference</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>NumPy</span><span>Deep Learning</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ishwari418/Real-time-object-detection-1-using-YOLOv8" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #4f46e5, #06d6a0);">
+                            <span class="project-category">Generative AI</span>
+                            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Admission Agent - AI-Powered Admission Assistant</h3>
+                            <p>RAG-based admission assistant built using IBM watsonx.ai that answers admission-related queries using document-grounded responses.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>Retrieval-Augmented Generation</li>
+                                <li>Admission Query Resolution</li>
+                                <li>Document-Based Knowledge Retrieval</li>
+                                <li>Conversational AI</li>
+                                <li>IBM Agent Lab Integration</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>IBM watsonx.ai</span><span>Granite LLM</span><span>Agent Lab</span><span>RAG</span><span>PDF/TXT Knowledge Base</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ishwari418/Admission-Agent" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #06d6a0, #f59e0b);">
+                            <span class="project-category">Machine Learning</span>
+                            <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Urban vs Rural House Price Prediction System</h3>
+                            <p>Machine learning application that predicts house prices using separate regression models for urban and rural properties, improving accuracy through location-aware intelligence.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>Dual Prediction Models</li>
+                                <li>Location-Aware Routing</li>
+                                <li>Feature Engineering</li>
+                                <li>Model Explainability</li>
+                                <li>Flask Web Interface</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Python</span><span>Flask</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>Random Forest</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ishwari418/urban-rural-house-price-prediction" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card glass-panel reveal">
+                        <div class="project-header" style="background: linear-gradient(135deg, #ef4444, #7c3aed);">
+                            <span class="project-category">Developer Tool</span>
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </div>
+                        <div class="project-body">
+                            <h3>Project Finder Assistant</h3>
+                            <p>Developer productivity tool that integrates with GitHub APIs to discover repositories, projects, and open-source resources based on user search queries.</p>
+                            <h4>Key Features</h4>
+                            <ul class="project-features">
+                                <li>GitHub API Integration</li>
+                                <li>Repository Discovery</li>
+                                <li>Project Recommendations</li>
+                                <li>Search Optimization</li>
+                                <li>Developer Resource Exploration</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span>Python</span><span>GitHub API</span><span>Flask</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ishwari418/Project-Finder-Assistant" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements section reveal">
+            <div class="container">
+                <h2 class="section-title gradient-text">Achievements</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content glass-panel">
+                            <h3><i class="fa-solid fa-trophy" style="color: var(--accent-gold);" aria-hidden="true"></i> AICTE Aptitude Test</h3>
+                            <p>Secured rank 11,000 among 4 million candidates in the AICTE Aptitude Test.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content glass-panel">
+                            <h3><i class="fa-solid fa-certificate" style="color: var(--accent-secondary);" aria-hidden="true"></i> Data Science Certification</h3>
+                            <p>Successfully completed Certificate of Quant University on Data Science.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-content glass-panel">
+                            <h3><i class="fa-solid fa-code-branch" style="color: var(--accent-primary);" aria-hidden="true"></i> Open Source Contributor - GSSoC</h3>
+                            <p>Contributed to 8+ open-source projects through GirlScript Summer of Code, collaborating on real-world codebases and improving project features, documentation, and issue resolution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section reveal">
+            <div class="container">
+                <h2 class="section-title gradient-text">Get In Touch</h2>
+                <div class="contact-container">
+                    <aside class="contact-info" aria-label="Contact details">
+                        <div class="info-card glass-panel">
+                            <div class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                            <div class="info-text">
+                                <h3>Email</h3>
+                                <p><a href="mailto:ishwaribelhekar11@gmail.com">ishwaribelhekar11@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-card glass-panel">
+                            <div class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+                            <div class="info-text">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+918459694072">8459694072</a></p>
+                            </div>
+                        </div>
+                        <div class="info-card glass-panel">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                            <div class="info-text">
+                                <h3>Location</h3>
+                                <p>Pune, India</p>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <form id="contact-form" class="contact-form glass-panel">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="submit-btn">
+                            <span class="submit-text">Send Message</span><span class="spinner" aria-hidden="true"></span>
+                        </button>
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://github.com/ishwari418" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/ishwari-belhekar-1ba4bb31b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Ishwari Belhekar. Made with care.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <div class="toast-content">
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <button id="scroll-top" class="scroll-top" type="button" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
