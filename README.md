@@ -1,81 +1,62 @@
-# Ishwari Belhekar Portfolio
+# Portfolio
 
-Professional portfolio for Ishwari Belhekar, a B.Tech CSE (AI & ML) student focused on AI/ML, full stack development, data science, cybersecurity, NLP, and real-world software solutions.
+🌐 **Live Website:** https://portfolio-7hst.onrender.com
 
-## Files Changed
+## About
 
-- `index.html` - updated About Me, Skills, Projects, SEO/meta tags, accessibility attributes, and contact form status area.
-- `style.css` - added project-card enhancements, technology badges, category tags, responsive refinements, contact-form feedback styling, and reduced-motion support.
-- `app.js` - improved typing roles, mobile navigation ARIA state, contact-form loading/success/error handling, and passive/reduced-motion behavior.
-- `server.js` - strengthened the Nodemailer contact API with request size limits, rate limiting, input trimming, validation, HTML escaping, and plain-text email fallback.
-- `README.md` - added setup and email configuration instructions.
+I'm Ishwari Belhekar, a B.Tech CSE (AI & ML) student passionate about building impactful software solutions using modern web technologies, AI/ML, data science, and cybersecurity concepts.
 
-## Run Locally
+This portfolio serves as a central hub for my projects, achievements, technical skills, and professional journey.
 
-1. Install dependencies:
+## Features
 
-   ```bash
-   npm install
-   ```
+* Responsive design for desktop, tablet, and mobile devices
+* Modern UI with smooth animations
+* Interactive project showcase
+* Skills and technology stack overview
+* Contact form with email integration
+* SEO-friendly structure
+* Accessibility-focused design
 
-2. Create a `.env` file from `.env.example`:
+## Tech Stack
 
-   ```bash
-   copy .env.example .env
-   ```
+### Frontend
 
-3. Fill in your email settings in `.env`.
+* HTML5
+* CSS3
+* JavaScript (ES6)
 
-4. Start the server:
+### Backend
 
-   ```bash
-   npm start
-   ```
+* Node.js
+* Express.js
 
-5. Open:-
+### Services
 
-   ```text
-   http://localhost:3000
-   ```
+* Resend Email API
 
-## Contact Form Email Configuration
+### Deployment
 
-The contact form uses a secure backend endpoint:
+* Render
 
-```text
-POST /api/contact
+## Contact
+
+The contact form is powered by a Node.js backend and Resend Email API, allowing visitors to send messages directly from the portfolio.
+
+## Deployment
+
+The application is deployed on Render:
+
+https://portfolio-7hst.onrender.com
+
+Make sure the following environment variables are configured when deploying:
+
+```env
+RESEND_API_KEY=your_resend_api_key
 ```
 
-It sends messages through Nodemailer using Gmail SMTP.
+## Author
 
-For Gmail:
+**Ishwari Belhekar**
 
-1. Go to your Google Account security settings.
-2. Enable 2-Step Verification.
-3. Create an App Password for Mail.
-4. Add the values to `.env`:
-
-   ```env
-   PORT=3000
-   EMAIL_USER=your.email@gmail.com
-   EMAIL_PASS=your-16-character-app-password
-   EMAIL_TO=ishwaribelhekar11@gmail.com
-   ```
-
-Use the app password, not your normal Gmail password.
-
-## Dependencies
-
-No new dependencies were added. Existing dependencies:
-
-- `express`
-- `nodemailer`
-- `cors`
-- `dotenv`
-
-## Deployment Notes
-
-- Set the same environment variables on your hosting platform.
-- Keep `.env` private and never commit it.
-- Deploy as a Node.js app so `/api/contact` can run server-side.
-- If deploying to a static-only host, the contact form backend will not work unless paired with a serverless function or backend service.
+B.Tech CSE (AI & ML)
