@@ -7,9 +7,9 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 const path = require('path');
-
+const resend = new Resend(process.env.RESEND_API_KEY);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -105,35 +105,14 @@ app.post('/api/contact', async (req, res) => {
     });
   }
 
-  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-    console.error('Email service is not configured. Set EMAIL_USER and EMAIL_PASS in .env.');
-    return res.status(500).json({
-      success: false,
-      message: 'Email service not configured.'
-    });
-  }
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
-
-try {
-  await transporter.verify();
-  console.log("✅ SMTP connection successful");
-} catch (err) {
-  console.error("❌ SMTP verify failed:", err);
-
+if (!process.env.RESEND_API_KEY) {
   return res.status(500).json({
     success: false,
-    message: "Email service unavailable."
+    message: 'Resend API key missing'
   });
 }
+
+
 
   const timestamp = new Date().toLocaleString('en-IN', {
     timeZone: 'Asia/Kolkata',
@@ -202,17 +181,16 @@ try {
     </html>
   `;
 
-  const mailOptions = {
-    from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_TO || process.env.EMAIL_USER,
-    subject: `Portfolio Contact from ${name}`,
-    html: htmlEmail,
-    text: `New portfolio message\n\nFrom: ${name} <${email}>\n\n${message}\n\nReceived on ${timestamp}`,
-    replyTo: email
-  };
+ 
 
   try {
-    await transporter.sendMail(mailOptions);
+await resend.emails.send({
+  from: 'onboarding@resend.dev',
+  to: 'ishwaribelhekar11@gmail.com',
+  subject: `Portfolio Contact from ${name}`,
+  html: htmlEmail,
+  replyTo: email
+});
 
     console.log(`Contact email sent from ${name} <${email}>`);
 
@@ -237,5 +215,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`\nPortfolio server running on http://localhost:${PORT}`);
   console.log(`   Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`   Email configured: ${process.env.EMAIL_USER ? 'yes' : 'no (set EMAIL_USER & EMAIL_PASS in .env)'}\n`);
+  console.log(`   Resend configured: ${process.env.RESEND_API_KEY ? 'yes' : 'no'}\n`)
 });
