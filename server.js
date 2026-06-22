@@ -183,17 +183,24 @@ if (!process.env.RESEND_API_KEY) {
 
  
 
-  try {
-await resend.emails.send({
-  from: 'onboarding@resend.dev',
-  to: 'ishwaribelhekar11@gmail.com',
-  subject: `Portfolio Contact from ${name}`,
-  html: htmlEmail,
-  replyTo: email
-});
+try {
 
-    console.log(`Contact email sent from ${name} <${email}>`);
+  const { data, error } = await resend.emails.send({
+    from: 'Portfolio <onboarding@resend.dev>',
+    to: ['ishwaribelhekar11@gmail.com'],
+    subject: `Portfolio Contact from ${name}`,
+    html: htmlEmail,
+    replyTo: email
+  });
 
+  console.log("DATA:", data);
+  console.log("ERROR:", error);
+
+  if (error) {
+    throw error;
+  }
+
+  console.log(`Contact email sent from ${name} <${email}>`);
     return res.status(200).json({
       success: true,
       message: 'Message sent successfully!'
