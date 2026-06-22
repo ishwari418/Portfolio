@@ -129,7 +129,7 @@ function initTyping() {
     const typedText = document.getElementById('typed-text');
     if (!typedText) return;
     
-    const roles = ['AI/ML Enthusiast', 'Full Stack Developer', 'Data Science Learner', 'Cybersecurity Explorer'];
+    const roles = ['AI/ML Enthusiast', 'Full Stack Developer', 'Data Science Learner', 'Open Source Contributor'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
