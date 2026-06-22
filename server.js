@@ -115,13 +115,25 @@ app.post('/api/contact', async (req, res) => {
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
 });
+
+try {
+  await transporter.verify();
+  console.log("✅ SMTP connection successful");
+} catch (err) {
+  console.error("❌ SMTP verify failed:", err);
+
+  return res.status(500).json({
+    success: false,
+    message: "Email service unavailable."
+  });
+}
 
   const timestamp = new Date().toLocaleString('en-IN', {
     timeZone: 'Asia/Kolkata',
@@ -209,7 +221,7 @@ const transporter = nodemailer.createTransport({
       message: 'Message sent successfully!'
     });
   } catch (error) {
-    console.error('Failed to send email:', error.message);
+    console.error('Failed to send email:', error);
 
     return res.status(500).json({
       success: false,
