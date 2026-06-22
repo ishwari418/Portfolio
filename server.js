@@ -187,7 +187,7 @@ try {
 
   const { data, error } = await resend.emails.send({
     from: 'Portfolio <onboarding@resend.dev>',
-    to: ['ishwaribelhekar11@gmail.com'],
+    to: ['ishwari.belhekor24@sanjivani.edu.in'],
     subject: `Portfolio Contact from ${name}`,
     html: htmlEmail,
     replyTo: email
